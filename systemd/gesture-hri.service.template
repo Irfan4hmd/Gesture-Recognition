@@ -1,0 +1,17 @@
+[Unit]
+Description=Real-time Gesture-to-Speech HRI Interface
+After=network.target multi-user.target camera.target
+
+[Service]
+Type=simple
+User=jetson
+WorkingDirectory=/opt/gesture-hri
+ExecStart=/usr/bin/python3 /opt/gesture-hri/src/main.py
+Restart=always
+RestartSec=5
+# Resource limits to prevent system lockup
+MemoryLimit=2G
+CPUQuota=200%
+
+[Install]
+WantedBy=multi-user.target

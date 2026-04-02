@@ -1,0 +1,12 @@
+camera:
+  device_id: 0
+  width: 640
+  height: 480
+  fps: 15 # Optimized for Jetson Nano thermal limits
+
+model:
+  path: "models/gesture_cnn_quantized.tflite"
+  confidence_threshold: 0.85
+
+app:
+  speech_cooldown: 3.0 # Seconds between TTS outputs to avoid overlapping speech

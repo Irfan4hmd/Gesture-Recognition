@@ -1,0 +1,7 @@
+numpy==1.19.5
+opencv-python-headless==4.5.3.56
+PyYAML==5.4.1
+# For Jetson Nano, install tflite-runtime using NVIDIA's pre-built wheels:
+# pip install --extra-index-url https://pypi.org/simple tflite-runtime
+# If using PyTorch, install torch/torchvision from NVIDIA wheels as well.
+# tensorflow is NOT recommended on Jetson Nano; use tflite-runtime instead.
